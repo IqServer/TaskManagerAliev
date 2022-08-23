@@ -4,6 +4,8 @@ using services;
 
 namespace controllers;
 
+[ApiController]
+[Route("api/[controller]/[action]")]
 class WorkSpacecontroller: ControllerBase
 {
     WorkSpaceService _workspaceservice;

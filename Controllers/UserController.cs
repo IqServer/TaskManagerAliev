@@ -4,6 +4,10 @@ using services;
 
 namespace controllers;
 
+[ApiController]
+[Route("api/[controller]/[action]")]
+
+
 class Usercontroller: ControllerBase
 {
     UserService _userservice;

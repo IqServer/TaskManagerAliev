@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>_18._08</RootNamespace>
+    <RootNamespace>Parodia</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

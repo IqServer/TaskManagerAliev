@@ -18,8 +18,11 @@ namespace models
         public string? Duedate {get;set;}
         public string? levelofcriticality {get;set;}
         public TimeOnly? Time {get;set;}
+        public int BoardId {get;set;}
         public Board? board {get;set;}
-        public Workspace? workspace {get;set;}
+        public int WorkspaceId {get;set;}
+        public Workspace? Workspace {get;set;}
+        public int archivecardId {get;set;}
         public ArchiveCard? archivecard {get;set;}
         
     }

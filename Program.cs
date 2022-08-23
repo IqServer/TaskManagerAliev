@@ -8,7 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console()
     .Enrich.WithProperty("Firma", "fir3")
+    .WriteTo.Seq("http://localhost:5341")
     );
+    
+builder.Services.AddCors(options => options.AddPolicy("AllowAll",
+    builder =>
+    {
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }));
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -16,6 +26,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<BoardService>();
+builder.Services.AddScoped<ArchiveCardService>();
+builder.Services.AddScoped<ChatUserService>();
+builder.Services.AddScoped<TaskCardService>();
+builder.Services.AddScoped<WorkSpaceService>();
+
 
 
 ConfigurationManager configuration = builder.Configuration;
@@ -28,10 +44,13 @@ builder.Services.AddDbContext<DataContext>(opt =>
 var app = builder.Build();
 
 
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
+    app.UseRouting();
+    app.UseCors("AllowAll");
+
 
 app.UseHttpsRedirection();
 
