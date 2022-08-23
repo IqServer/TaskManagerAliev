@@ -17,6 +17,7 @@ namespace models
         public string? Tag {get;set;}
         public string? Duedate {get;set;}
         public string? levelofcriticality {get;set;}
+        public TimeOnly? Time {get;set;}
         public Board? board {get;set;}
         public Workspace? workspace {get;set;}
         public ArchiveCard? archivecard {get;set;}

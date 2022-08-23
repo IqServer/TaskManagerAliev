@@ -21,4 +21,9 @@ public class WorkSpaceService{
         Workspace workSpace = new Workspace();
         
     }
+
+    internal void GenerateWorkSpace()
+    {
+        throw new NotImplementedException();
+    }
 }
