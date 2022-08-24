@@ -6,7 +6,7 @@ namespace controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-class ArchiveCardcontroller: ControllerBase
+public class ArchiveCardcontroller: ControllerBase
 {
     ArchiveCardService _archivecardservice;
     public ArchiveCardcontroller(ArchiveCardService archivecardService)

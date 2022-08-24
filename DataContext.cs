@@ -21,6 +21,11 @@ namespace testnet
             //модификация таблиц в бд
         }
 
+    public void CreateBDNew()
+        {
+            Database.EnsureDeleted();
+            Database.EnsureCreated();
+        } 
     }
 
 

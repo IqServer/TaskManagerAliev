@@ -6,7 +6,7 @@ namespace controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-class Boardcontroller: ControllerBase
+public  class Boardcontroller: ControllerBase
 {
     BoardService _boardservice;
     public Boardcontroller(BoardService boardService)

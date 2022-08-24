@@ -8,7 +8,7 @@ namespace controllers;
 [Route("api/[controller]/[action]")]
 
 
-class Usercontroller: ControllerBase
+public  class Usercontroller: ControllerBase
 {
 
 

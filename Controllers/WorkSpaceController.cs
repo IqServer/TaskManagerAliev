@@ -6,7 +6,7 @@ namespace controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-class WorkSpacecontroller: ControllerBase
+public  class WorkSpacecontroller: ControllerBase
 {
     WorkSpaceService _workspaceservice;
     public WorkSpacecontroller(WorkSpaceService workspaceService)

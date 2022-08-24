@@ -6,7 +6,7 @@ namespace controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-class ChatUsercontroller: ControllerBase
+public  class ChatUsercontroller: ControllerBase
 {
     ChatUserService _chatuserservice;
     public ChatUsercontroller(ChatUserService chatuserService)

@@ -1,17 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using models;
 using services;
+using testnet;
 
 namespace controllers;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-class Testcontroller: ControllerBase
+public  class Testcontroller: ControllerBase
 
 {
     UserService _userservice;
-    public Testcontroller(UserService userService)
+    DataContext _context;
+    public Testcontroller(UserService userService,  DataContext context)
     {
+        _context = context;
          _userservice = userService;
     }
 
@@ -20,4 +23,10 @@ class Testcontroller: ControllerBase
     {
         _userservice.GenerateUser();
     }
+    [HttpGet]
+    public void GeneratDB()
+    {
+        _context.CreateBDNew();
+  }
+
 }
