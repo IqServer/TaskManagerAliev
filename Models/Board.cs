@@ -4,7 +4,6 @@ namespace models
     {
         public int Id {get;set;}
         public string? Cards {get;set;}
-        public string? Oblast {get;set;}
         public int WorkspaceId  {get;set;} 
         public Workspace? workspace {get;set;}
     }

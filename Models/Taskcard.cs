@@ -22,8 +22,9 @@ namespace models
         public Board? board {get;set;}
         public int WorkspaceId {get;set;}
         public Workspace? Workspace {get;set;}
-        public int archivecardId {get;set;}
+        public int? archivecardId {get;set;}
         public ArchiveCard? archivecard {get;set;}
+        public bool? IsActive {get;set;}
         
     }
 }
